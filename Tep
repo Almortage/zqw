@@ -4,7 +4,7 @@
 _get_zlink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Tepthonee" ]]
+    if [[ $UPSTREAM_REPO == "jmub" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS9QUEYyMi9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -24,7 +24,7 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Tepthonee" ]]
+    if [[ $UPSTREAM_REPO == "jmub" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS9QUEYyMg==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -45,7 +45,7 @@ _run_catpackgit() {
     $(_run_python_code 'from git import Repo
 import sys
 
-OFFICIAL_UPSTREAM_REPO = "https://github.com/Tepthonee/v2"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/Almortage/jmub"
 ACTIVE_BRANCH_NAME = "master"
 
 repo = Repo.init()
@@ -84,7 +84,7 @@ _start_bot () {
     _run_catgit
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "⌭ جـاري بـدء تنصيـب تــيــبثون ⌭ "
+    echo "⌭ جـاري بـدء تنصيـب المرتجل ⌭ "
     echo "
 
     "
