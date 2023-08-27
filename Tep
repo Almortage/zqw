@@ -88,7 +88,7 @@ _start_bot () {
     echo "
 
     "
-    python3 -m zthon
+    python3 -m razan
 }
 
 _start_bot
