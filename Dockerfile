@@ -1,13 +1,13 @@
-FROM Tepthonee/PPF22:alpine
+FROM Almortage/jmub:alpine
 
 #clonning repo 
-RUN git clone https://github.com/Tepthonee/PPF22/tree/master.git /root/zthon
+RUN git clone https://github.com/Almortage/jmub/tree/master.git /root/razan
 #working directory 
-WORKDIR /root/zthon
+WORKDIR /root/razan
 
 # Install requirements
 RUN pip3 install -U -r requirements.txt
 
-ENV PATH="/home/zthon/bin:$PATH"
+ENV PATH="/home/razan/bin:$PATH"
 
-CMD ["python3","-m","zthon"]
+CMD ["python3","-m","razan"]
